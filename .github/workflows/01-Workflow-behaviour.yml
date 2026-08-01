@@ -1,0 +1,16 @@
+name: 01-Workflow-behaviour
+
+on:
+    push
+
+jobs:
+    echo-hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Say Hello
+              run: echo "Hello User!"
+    echo-goodbye:
+        runs-on: ubuntu-latest
+        steps:
+            - name: say GoodBye
+              run: echo "GoodBye!"
