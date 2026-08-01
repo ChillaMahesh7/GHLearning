@@ -11,11 +11,11 @@ jobs:
               if: ${{ !cancelled() }}
               run: |
                 echo "this is cancelled function"
+                exit 1
             - name: Always Function
               if: always()
               run: |
                 echo "this functions always runs"
-                exit 1
             - name: Success Function
               if: success()
               run: echo "this is success function"
