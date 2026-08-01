@@ -7,6 +7,10 @@ jobs:
     status-check-functions:
         runs-on: ubuntu-latest
         steps:
+            - name: cancelled function
+              if: ${{ !cancelled() }}
+              run: |
+                echo "this is cancelled function"
             - name: Always Function
               if: always()
               run: |
@@ -15,10 +19,6 @@ jobs:
             - name: Success Function
               if: success()
               run: echo "this is success function"
-            - name: cancelled function
-              if: ${{ !cancelled() }}
-              run: |
-                echo "this is cancelled function"
             - name: fauilure function
               if: failure()
               run: echo "this is failure function"
