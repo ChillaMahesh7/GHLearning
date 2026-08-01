@@ -11,7 +11,9 @@ jobs:
         steps:
             - name: give input value
               id: name
-              run: echo "name=mahesh" >> $GITHUB_OUTPUT
+              run: |
+                echo "name1=mahesh" > $GITHUB_OUTPUT
+                echo "name2=mahesh" > $GITHUB_OUTPUT
 
     output:
         runs-on: ubuntu-latest
