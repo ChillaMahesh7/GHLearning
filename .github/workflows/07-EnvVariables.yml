@@ -21,4 +21,4 @@ jobs:
                 echo "local_var at workflow leveL: ${{ env.local_var }}"
                 echo "local_var at job leveL: ${{ env.local_Job_var }}"
                 echo "local_var at step leveL: ${{ env.local_step_var }}"
-                echo "local_var at workflow leveL: ${{ env.global_var }}"
+                echo "global_var defined at Step leveL: ${{ env.global_var }}"
