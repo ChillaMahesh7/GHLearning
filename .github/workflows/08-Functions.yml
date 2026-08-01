@@ -1,0 +1,21 @@
+name: 08-Functions
+
+on:
+    push
+
+jobs:
+    status-check-functions:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Always Function
+              if: always()
+              run: echo "this functions always runs"
+            - name: Success Function
+              if: success()
+              run: echo "this is success function"
+            - name: cancelled function
+              if: cancelled()
+              run: echo "this is cancelled function"
+            - name: fauilure function
+              if: failure()
+              run: echo "this is failure function"
