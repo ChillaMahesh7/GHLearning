@@ -1,0 +1,14 @@
+name: 06-Expressions
+
+on:
+    push
+
+jobs:
+    conditionalExecution:
+        runs-on: ubuntu-latest
+        steps:
+            - name: ConditionalExecution
+              if: ${{ github.event_name == 'push' }}
+              run: |
+                echo "event Name: ${{ github.event_name }}"
+                echo "Execution Completed"
