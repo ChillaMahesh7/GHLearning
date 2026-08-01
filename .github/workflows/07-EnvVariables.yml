@@ -10,7 +10,6 @@ jobs:
     VariableLearning:
         env:
             local_Job_var: "local Job Variable"
-            global_var: "Global Variable at Job definition level"
         runs-on: ubuntu-latest
         steps:
             - name: Checking Variable Values
