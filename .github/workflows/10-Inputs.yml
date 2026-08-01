@@ -26,4 +26,6 @@ jobs:
         steps:
             - name: Inout checking
               run: |
-                echo ""
+                echo "degub: ${{ inputs.debug }}"
+                echo "environment: ${{ inputs.environment }}"
+                echo "version: ${{ inputs.version }}"
