@@ -1,0 +1,15 @@
+name: 07-1-MultiEnv
+
+on:
+    push
+
+jobs:
+    FetchEnvironmentVariables:
+        runs-on: ubuntu_latest
+        steps:
+            - name: Fetching environment Variables
+              run: |
+                echo "Repository local var: ${{ vars.REPO_LOCAL_VAR }}"
+                echo "Repository Global var: ${{ vars.GLOBAL_VAR }}"
+                echo "Environment local var: ${{ vars.LOCAL_VAR }}"
+                echo "Environment Global var: ${{ vars.GLOBAL_VAR }}"
