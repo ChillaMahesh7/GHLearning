@@ -1,0 +1,14 @@
+name: 02-Events
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    echo-sayHello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: say Hello
+              run: |
+                echo "Hello World"
