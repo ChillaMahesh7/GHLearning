@@ -16,7 +16,6 @@ jobs:
             - name: Checking Variable Values
               env:
                 local_step_var: "this is local Step Variable"
-                global_var: "Global Variable at Step definition level"
               run: |
                 echo "local_var at workflow leveL: ${{ env.local_var }}"
                 echo "local_var at job leveL: ${{ env.local_Job_var }}"
