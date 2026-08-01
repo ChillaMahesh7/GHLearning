@@ -9,7 +9,9 @@ jobs:
         steps:
             - name: Always Function
               if: always()
-              run: echo "this functions always runs"
+              run: |
+                echo "this functions always runs"
+                exit 1
             - name: Success Function
               if: success()
               run: echo "this is success function"
@@ -17,7 +19,6 @@ jobs:
               if: ${{ !cancelled() }}
               run: |
                 echo "this is cancelled function"
-                exit 1
             - name: fauilure function
               if: failure()
               run: echo "this is failure function"
