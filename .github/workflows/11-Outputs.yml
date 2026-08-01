@@ -12,8 +12,8 @@ jobs:
             - name: give input value
               id: name
               run: |
-                echo "name1=mahesh" > $GITHUB_OUTPUT
-                echo "name2=mahesh" > $GITHUB_OUTPUT
+                echo "name1=mahesh" >> $GITHUB_OUTPUT
+                echo "name2=Lithiksha" >> $GITHUB_OUTPUT
                 cat $GITHUB_OUTPUT
 
     output:
