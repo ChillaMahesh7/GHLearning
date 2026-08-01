@@ -1,11 +1,11 @@
-name: 03-MultipleAction
+name: 03-MultipleActions
 
 on:
+    workflow_dispatch:
     push:
       branches:
         - main
         - releases/**
-    workflow-dispatch:
 
 jobs:
     setup-node:
