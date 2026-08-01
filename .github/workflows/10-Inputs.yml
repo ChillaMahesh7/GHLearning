@@ -1,0 +1,29 @@
+name: 10-Inputs
+
+on:
+    workflow_dispatch:
+        inputs:
+            debug:
+                type: boolean
+                required: true
+                description: run in debug mode
+                default: false
+            environment:
+                type: environment
+                required: true
+                description: select environment
+            version:
+                type: choice
+                options:
+                    - v1
+                    - v2
+                    - v3
+                description: select option
+
+jobs:
+    Input:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Inout checking
+              run: |
+                echo ""
