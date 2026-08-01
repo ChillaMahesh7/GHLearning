@@ -1,0 +1,11 @@
+name: 05-Contexts
+
+on:
+    push
+
+jobs:
+    fetching-eventName:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get EventName
+              run: echo "${{ github.event_name }}"
