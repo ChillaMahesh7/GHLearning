@@ -1,0 +1,21 @@
+name: 03-MultipleAction
+
+on:
+    push:
+      branches:
+        - main
+        - releases/**
+    workflow-dispatch:
+
+jobs:
+    setup-node:
+        runs-on: ubuntu-latest
+        steps:
+            - name: setup Node
+              uses: actions/setup-node@v4
+              with:
+                node-version: "20.x"
+            - name: check status
+              if: success()
+              run: echo "Node setup completed"
+              
