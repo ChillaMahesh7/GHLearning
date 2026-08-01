@@ -6,6 +6,7 @@ on:
 jobs:
     FetchEnvironmentVariables:
         runs-on: ubuntu-latest
+        environment: staging
         steps:
             - name: Fetching environment Variables
               run: |
