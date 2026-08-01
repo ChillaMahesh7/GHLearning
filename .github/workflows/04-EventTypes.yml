@@ -1,0 +1,14 @@
+name: 04-EventTypes
+
+on:
+    pull_request: 
+        types: [opened]
+        branches:
+          - main
+
+jobs:
+    echo-hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: say Hello
+              run: echo "pull request created"
