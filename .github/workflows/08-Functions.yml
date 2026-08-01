@@ -15,7 +15,9 @@ jobs:
               run: echo "this is success function"
             - name: cancelled function
               if: ${{ !cancelled() }}
-              run: echo "this is cancelled function"
+              run: |
+                echo "this is cancelled function"
+                exit 1
             - name: fauilure function
               if: failure()
               run: echo "this is failure function"
