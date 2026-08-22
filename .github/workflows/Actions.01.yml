@@ -14,4 +14,10 @@ jobs:
 
             - name: Node Setup Completed
               run: echo " Node setup completed"
+            - name: Setup Python
+              uses: actions/setup-python@v5
+              with:
+                python-version: '3.14.7'
 
+            - name: Python Setup Completed
+              run: echo "Python Setup completed"
