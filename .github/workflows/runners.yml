@@ -1,0 +1,22 @@
+name: Runners Practice
+
+on:
+    workflow_dispatch
+
+jobs:
+    PrintWindowsRunner:
+        runs-on: windows-latest
+        steps:
+            - name: Print Windows Runner Name
+              run: echo "Runner name is- ${{ runner.name }}"
+    PrintingUbuntuRunner:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Ubuntu Runner Name
+              run: echo "Runner Name - ${{ runner.name }}"
+
+    PrintingMacOSrunner:
+        runs-on: macos-latest
+        steps:
+            - name: Print MacOS Runner Name
+              run: echo "Runner name- ${{ runner.name }}"
