@@ -1,4 +1,4 @@
-name: Setup Node using Actions
+name: Setup Node and Python using Actions
 
 on:
     workflow_dispatch
