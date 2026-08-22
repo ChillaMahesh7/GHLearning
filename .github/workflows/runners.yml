@@ -8,15 +8,15 @@ jobs:
         runs-on: windows-latest
         steps:
             - name: Print Windows Runner Name
-              run: echo "Runner name is- ${{ runner.name }}"
+              run: echo "Runner name is- ${{ runner.os }}"
     PrintingUbuntuRunner:
         runs-on: ubuntu-latest
         steps:
             - name: Print Ubuntu Runner Name
-              run: echo "Runner Name - ${{ runner.name }}"
+              run: echo "Runner Name - ${{ runner.os }}"
 
     PrintingMacOSrunner:
         runs-on: macos-latest
         steps:
             - name: Print MacOS Runner Name
-              run: echo "Runner name- ${{ runner.name }}"
+              run: echo "Runner name- ${{ runner.os }}"
