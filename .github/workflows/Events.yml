@@ -13,4 +13,8 @@ jobs:
             - name: Lion
               run: echo "Lion is the king of the forest"
 
+            - name: Printing Event Name
+              run: |
+                echo 'Event Name: ${{ github.event }}'
+
             
