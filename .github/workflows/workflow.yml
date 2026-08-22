@@ -1,0 +1,17 @@
+name: Workflow practice
+
+on:
+    workflow_dispatch
+
+jobs:
+    sayHi:
+        runs-on: ubuntu-latest
+        steps:
+            - name: sayHi
+              run: echo "Hello Mahesh!"
+
+    sayGoodBye:
+        runs-on: ubuntu-latest
+        steps:
+            - name: say Good Bye
+              run: echo "GoodBye, Mahesh!"
