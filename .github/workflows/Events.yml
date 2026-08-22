@@ -1,7 +1,7 @@
 name: Animal Names
 
 on:
-    - push
+    - workflow_dispatch
 jobs:
     animalsNames:
         runs-on: ubuntu-latest
