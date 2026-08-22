@@ -1,0 +1,16 @@
+name: Animal Names
+
+on:
+    push
+
+jobs:
+    animalsNames:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Tiger
+              run: echo "Tiger lives in Forest"
+
+            - name: Lion
+              run: echo "Lion is the king of the forest"
+
+            
