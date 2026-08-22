@@ -12,7 +12,7 @@ jobs:
                 echo "Hello spidey!"
                 echo "Spiderman is a my childhood hero"
             - name: list all the files
-              run: ls
+              run: exit
             - name: show the current working directory
               run: pwd
     IronMan:
