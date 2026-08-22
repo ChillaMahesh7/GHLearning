@@ -1,7 +1,7 @@
 name: workflow practice
 
 on:
-    push
+    workflow_dispatch
 
 jobs:
     spidey:
