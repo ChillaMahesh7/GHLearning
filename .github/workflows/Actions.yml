@@ -21,10 +21,11 @@ jobs:
             - name: Checkout Code
               uses: actions/checkout@v4
 
+            - name: Presetn working directory
+              run: pwd
+
             - name: Install Dependencies
-              run: |
-                pwd
-                npm ci
+              run: npm ci
             
             - name: Perform Unit Testing
               run: npm test
