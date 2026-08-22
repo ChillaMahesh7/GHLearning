@@ -1,0 +1,17 @@
+name: Setup Node using Actions
+
+on:
+    workflow_dispatch
+
+jobs:
+    NodeSetup:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                working-directory: '24.x'
+
+            - name: Node Setup Completed
+              run: echo " Node setup completed"
+
