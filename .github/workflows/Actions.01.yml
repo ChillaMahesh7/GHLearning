@@ -10,7 +10,7 @@ jobs:
             - name: Setup Node
               uses: actions/setup-node@v4
               with:
-                working-directory: '24.x'
+                node-version: '24.x'
 
             - name: Node Setup Completed
               run: echo " Node setup completed"
