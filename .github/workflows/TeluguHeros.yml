@@ -1,0 +1,32 @@
+name: Telugu Heroes
+
+on:
+    workflow_dispatch
+
+jobs:
+    tollywood:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Chiranjeevi
+              run: echo "Hey! This is chiranjeevi"
+
+            - name: Balakrishna
+              run: echo "Hey! This is Balayya"
+
+            - name: Nagarjuna
+              run: echo " hey! this is nagarjuna"
+            
+            - name: Venkatesh
+              run: echo "Hey! this is venkatesh"
+    Collywood:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Vijay
+              run: echo "Hey! This is Vijay from Tamilnadu"
+
+            - name: Surya
+              run: echo "Hey! this is Surya"
+
+            - name: Karthi
+              run: echo "Hey! this is Karthi"
+    
