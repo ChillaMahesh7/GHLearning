@@ -1,0 +1,31 @@
+# 1. Checkout code
+# 2. set working directory
+# 3. Install dependencies
+# 4. Perform unit testig
+# 5. Build React Application
+# 6. Deploy React Application
+
+
+name: Deploying React Application
+
+on:
+    workflow_dispatch
+
+jobs:
+    DeployReactApp:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+
+            - name: Install Dependencies
+              run: npm ci
+            
+            - name: Perform Unit Testing
+              run: npm test
+            
+            - name: Build React Application
+              run: npm build
+
+            - name: Deploy React Application
+              run: echo " React Application Deployed"
