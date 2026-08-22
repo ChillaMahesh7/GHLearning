@@ -1,0 +1,22 @@
+name: workflow practice
+
+on:
+    push
+
+jobs:
+    spidey:
+        runs-on: ubuntu-latest
+        steps:
+            - name: writing a step for spidey
+              run: |
+                echo "Hello spidey!"
+                echo "Spiderman is a my childhood hero"
+            - name: list all the files
+              run: ls
+            - name: show the current working directory
+              run: pwd
+    IronMan:
+        runs-on: ubuntu-latest
+        steps:
+            - name: writing workflow for Ironman
+              run: echo "Hello Ironman"
