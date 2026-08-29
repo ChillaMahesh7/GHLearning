@@ -1,0 +1,11 @@
+name: contenx Practice
+
+on:
+    workflow-dispatch:
+
+jobs:
+    Contexts:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Printing Context value
+              run: echo "${{ github.event_name }}"
