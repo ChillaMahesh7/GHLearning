@@ -1,0 +1,21 @@
+name: Multiworkflow Variable
+
+on:
+    workflow_dispatch
+
+jobs:
+    PrintRepositoryVarialble:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Repository Variable
+              run: |
+                echo "${{ vars.LOCAL_RESPOSITORY_VARIABLE }}"
+                echo "${{ vars.OVERIDE_VARIABLE }}"
+    PrintEnvironmentVariable:
+        runs-on: ubuntu-latest
+        environment: test
+        steps:
+            - name: Print Environment Variables
+              run:
+                echo "${{ vars.LOCAL_TEST_VARIABLE }}"
+                echo ""${{ vars.OVERIDE_VARIABLE }}
