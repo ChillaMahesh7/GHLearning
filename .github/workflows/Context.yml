@@ -1,7 +1,7 @@
-name: contenx Practice
+name: context Practice
 
 on:
-    workflow_dispatch:
+    workflow_dispatch
 
 jobs:
     Contexts:
