@@ -25,7 +25,7 @@ jobs:
               if: cancelled()
               run: echo "This is cancelled Function"
 
-            - name: Cancelled Function
+            - name: Not Cancelled Function
               if: ${{ !cancelled() }}
               run: echo "This is Not cancelled Function"
 
