@@ -1,0 +1,30 @@
+name: Functions Practice
+
+on:
+    workflow_dispatch
+
+jobs:
+    FunctionsPractice:
+        runs-on: ubuntu-latest
+        steps:
+            - name: General Function1
+              run: exit 1
+
+            - name: General Function2
+              run: echo "This is General function2"
+
+            - name: Failed Function
+              if: failure()
+              run: echo "this is Failed Function"
+
+            - name: Success function
+              if: success()
+              run: echo "This is success function"
+
+            - name: Cancelled Function
+              if: cancelled()
+              run: echo "This is cancelled Function"
+
+            - name: Always Function
+              if: always()
+              run: echo "This is always function"
