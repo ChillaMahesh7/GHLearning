@@ -1,0 +1,21 @@
+name: Outputs Practice
+
+on:
+    workflow_dispatch
+
+jobs:
+    Welcome:
+        runs-on: ubuntu-latest
+        outputs:
+            name: ${{ steps.greet.outputs.name }}
+        steps:
+            - name: Print Welcome Message
+              id: greet
+              run: echo "name=Mahesh" >> $GITHUB_OUTPUT
+    
+    GoodBye:
+        runs-on: ubuntu-latest
+        needs: Welcome
+        steps:
+            - name: GoodBye Message
+              run: echo "Good Bye ${{ needs.Welcome.outputs.name }}"
