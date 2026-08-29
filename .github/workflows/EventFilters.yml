@@ -1,0 +1,18 @@
+name: Event Filters
+
+on:
+    push:
+        branches:
+            - main
+            - 'releases/**'
+        branches-ignore:
+            - 'docs/**'
+
+jobs:
+    EventfilterDetails:
+        runs-on: ubuntu-latest
+        steps:
+            - name: print event name
+              run: echo "${{ github.event_name }}"
+            - name: print Repo name
+              run: echo "${{ github.repository }}"
