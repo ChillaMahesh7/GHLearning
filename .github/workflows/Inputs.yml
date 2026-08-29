@@ -1,0 +1,36 @@
+name: Inputs Practice
+
+on:
+    workflow_dispatch:
+      inputs:
+        nodeSetup:
+            type: boolean
+            description: "Do you want to setup node?"
+            required: true
+            default: false
+        NodeVersion:
+            type: choice
+            options:
+                - '20.x'
+                - '18.x'
+            description: "Select the node version you want to setup"
+            required: true
+            default: '20.x'
+        Environment:
+            type: environment
+            description: "Select the installation environment"
+            required: true
+            default: test
+
+jobs:
+    NoodeSetup:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Node setup
+              if: ${{ inputs.nodeSetup }}
+              uses: actions/setup-node@v4
+              with:
+                node-version: ${{ inputs.NodeVersion }}
+            - name: Node Setup Status
+              if: ${{ inputs.nodeSetup }}
+              run: echo "Node setup completed on ${{ inputs.Environment }}"
