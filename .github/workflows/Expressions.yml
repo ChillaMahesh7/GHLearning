@@ -1,7 +1,6 @@
 name: Expressions Practice
 
 on:
-    - push
     - workflow_dispatch
 
 jobs:
