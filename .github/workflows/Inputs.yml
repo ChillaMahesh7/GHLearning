@@ -32,5 +32,5 @@ jobs:
               with:
                 node-version: ${{ inputs.NodeVersion }}
             - name: Node Setup Status
-              if: ${{ inputs.nodeSetup }}
+              if: ${{ inputs.nodeSetup && success() }}
               run: echo "Node setup completed on ${{ inputs.Environment }}"
