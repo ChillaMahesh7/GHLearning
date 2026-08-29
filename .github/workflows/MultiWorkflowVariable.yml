@@ -18,4 +18,4 @@ jobs:
             - name: Print Environment Variables
               run:
                 echo "${{ vars.LOCAL_TEST_VARIABLE }}"
-                echo ""${{ vars.OVERIDE_VARIABLE }}
+                echo "${{ vars.OVERIDE_VARIABLE }}"
