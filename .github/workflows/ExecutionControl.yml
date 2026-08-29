@@ -11,9 +11,9 @@ jobs:
               run: |
                 sleep 15
                 echo "This step executed after 30s"
-    ChildJoobExecution:
+    ChildJobExecution:
         runs-on: ubuntu-latest
         needs: ParentJobExecution
         steps:
-            - name: Chi;d Job Execution
-              run: "This job is executed after Parent job"
+            - name: Child Job Execution
+              run: echo "This job is executed after Parent job"
