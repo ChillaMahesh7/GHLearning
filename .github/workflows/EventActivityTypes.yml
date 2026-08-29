@@ -14,5 +14,5 @@ jobs:
             - name: branch name
               run: echo "${{ github.ref_name }}"
             - name: Pull Request Status
-              run: echo "$${{ github.event.pull_request.state }}"
+              run: echo "${{ github.event.pull_request.state }}"
         
