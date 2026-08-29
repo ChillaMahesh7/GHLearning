@@ -25,6 +25,10 @@ jobs:
               if: cancelled()
               run: echo "This is cancelled Function"
 
+            - name: Cancelled Function
+              if: !cancelled()
+              run: echo "This is Not cancelled Function"
+
             - name: Always Function
               if: always()
               run: echo "This is always function"
