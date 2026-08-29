@@ -16,6 +16,6 @@ jobs:
         environment: test
         steps:
             - name: Print Environment Variables
-              run:
+              run: |
                 echo "${{ vars.LOCAL_TEST_VARIABLE }}"
                 echo "${{ vars.OVERIDE_VARIABLE }}"
