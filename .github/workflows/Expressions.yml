@@ -1,0 +1,17 @@
+name: Expressions Practice
+
+on:
+    - push
+    - workflow_dispatch
+
+jobs:
+    ExpressionsPractice:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print PUSH Event
+              if: ${{ github.event_name == 'push' }}
+              run: echo "This is ${{ github.event_name }} event"
+
+            - name: Print Other Event
+              if: ${{ github.event_name == 'workflow_dispatch' }}
+              run: echo "This is ${{ github.event_name }} event"
