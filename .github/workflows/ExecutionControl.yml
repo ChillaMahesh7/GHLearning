@@ -1,0 +1,19 @@
+name: Execution Control Workflow
+
+on:
+    workflow_dispatch
+
+jobs:
+    ParentJobExecution:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Parent Job Execution
+              run: |
+                sleep 15
+                echo "This step executed after 30s"
+    ChildJoobExecution:
+        runs-on: ubuntu-latest
+        needs: ParentJobExecution
+        steps:
+            - name: Chi;d Job Execution
+              run: "This job is executed after Parent job"
