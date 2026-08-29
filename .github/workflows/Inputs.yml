@@ -23,7 +23,7 @@ on:
             default: test
 
 jobs:
-    NoodeSetup:
+    NodeSetup:
         runs-on: ubuntu-latest
         steps:
             - name: Node setup
