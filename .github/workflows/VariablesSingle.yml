@@ -1,0 +1,38 @@
+name: Single Workflow Environment Variables
+
+on:
+    workflow_dispatch
+env:
+    local_workflow_var: "Workflow value"
+    override_var: "override value at workflow level"
+jobs:
+    SingleWorkflow:
+        runs-on: ubuntu-latest
+        env:
+            local_job_var: "job value"
+        steps:
+            - name: Printing Environment Variables
+              env:
+                local_step_var: "step value"
+                override_var: "override value at step level"
+              run: |
+                echo "workflow variable: ${{env.local_workflow_var }}"
+                echo "job variable: ${{ env.local_job_var }}"
+                echo "step variable: ${{ env.local_step_var }}"
+                echo "overriding variable: ${{ env.override_var }}"
+    PrintOverrideVariable:
+        runs-on: ubuntu-latest
+        env:
+            override_var: "override value at job level"
+        steps:
+            - name: Print Override Variable
+              run: |
+                echo "overriding variable: ${{ env.override_var }}"
+
+    PrintWorkflowOverrideValue:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Printing Workflow Override value
+              run: |
+                echo "overriding variable: ${{ env.override_var }}"
+    
