@@ -13,3 +13,5 @@ jobs:
               run: echo "${{ github.event_name }}"
             - name: print Repo name
               run: echo "${{ github.repository }}"
+            - name: print Branch name
+              run: echo "${{ github.ref_name }}"
