@@ -1,4 +1,4 @@
-name: Concurrency Practice
+name: Job Concurrency Practice
 
 on:
     workflow_dispatch
