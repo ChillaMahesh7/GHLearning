@@ -1,0 +1,16 @@
+name: Concurrency Practice
+
+on:
+    workflow_dispatch
+concurrency:
+    group: concurrency-${{ github.sha }}
+    cancel-in-progress: true
+
+jobs:
+    CocurrencyPractice:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Testing Concurrency
+              run: |
+                sleep 30
+                echo "Concurrency testing"
