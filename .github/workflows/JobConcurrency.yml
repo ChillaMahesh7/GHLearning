@@ -1,0 +1,21 @@
+name: Concurrency Practice
+
+on:
+    workflow_dispatch
+
+jobs:
+    CocurrencyPractice1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Testing Concurrency
+              run: |
+                sleep 20
+                echo "Concurrency testing"
+    CocurrencyPractice2:
+        runs-on: ubuntu-latest
+        concurrency:
+            group: concurrency-${{ github.sha }}
+        steps:
+            - name: Testing Concurrency
+              run: |
+                echo "Concurrency testing"
