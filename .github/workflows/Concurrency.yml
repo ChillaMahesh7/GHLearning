@@ -4,10 +4,12 @@ on:
     workflow_dispatch
 concurrency:
     group: concurrency-${{ github.sha }}
-    
+
 jobs:
     CocurrencyPractice:
         runs-on: ubuntu-latest
         steps:
             - name: Testing Concurrency
-              run: echo "Concurrency testing"
+              run: |
+                sleep 30
+                echo "Concurrency testing"
